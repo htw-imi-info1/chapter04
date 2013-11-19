@@ -75,16 +75,17 @@ public class MusicOrganizer
 
     public void listAllFilesWithWhileShort()
     {
-        int index = 0;
-        while(index < files.size()) {
-            System.out.println(files.get(index++));
+        int position = 0;
+        while(position < files.size()) {
+            System.out.println(""+position+": "+files.get(position++));
         }
     }
 
     public void listAllFiles()
     {
+        int position = 0;
         for(String filename : files) {
-            System.out.println(filename);
+            System.out.println(""+position++ + ": "+filename);
         }
     }
 
@@ -95,7 +96,6 @@ public class MusicOrganizer
         } 
         return null;
     }
-
     public String findFirstWithWhile(String searchString){
         boolean found = false;
         int index = 0;
@@ -106,12 +106,15 @@ public class MusicOrganizer
             else
                 index++;
         } 
+        return found ? files.get(index) : null;
+       
+        /*
         if (found) 
             return files.get(index);
         else
             return null;
-        // return found ? files.get(index) : null;
-       
+            */
+      
     }
 
     /**
