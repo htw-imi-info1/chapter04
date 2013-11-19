@@ -1,8 +1,8 @@
 #BlueJ package file
-package.editor.height=317
-package.editor.width=649
-package.editor.x=366
-package.editor.y=32
+package.editor.height=327
+package.editor.width=399
+package.editor.x=279
+package.editor.y=22
 package.numDependencies=0
 package.numTargets=1
 package.showExtends=true
@@ -12,9 +12,9 @@ readme.editor.height=649
 readme.editor.width=817
 readme.editor.x=0
 readme.editor.y=22
-target1.editor.height=738
-target1.editor.width=890
-target1.editor.x=70
+target1.editor.height=574
+target1.editor.width=800
+target1.editor.x=0
 target1.editor.y=22
 target1.height=60
 target1.name=MusicOrganizer

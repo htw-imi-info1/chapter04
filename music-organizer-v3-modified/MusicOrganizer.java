@@ -12,7 +12,7 @@ public class MusicOrganizer
     private ArrayList<String> files;
     // A player for the music files.
     private MusicPlayer player;
-        
+
     /**
      * Create a MusicOrganizer
      */
@@ -21,7 +21,15 @@ public class MusicOrganizer
         files = new ArrayList<String>();
         player = new MusicPlayer();
     }
-    
+
+    public void addTestData(){
+        addFile("../audio/joplin-entertainer.mp3");
+        addFile("../audio/mozart-nm-rondo.mp3");
+        addFile("../audio/foo.mp3");
+        addFile("../audio/bar.mp3");
+        addFile("../audio/foobar.mp3");
+    }
+
     /**
      * Add a file to the collection.
      * @param filename The file to be added.
@@ -30,7 +38,7 @@ public class MusicOrganizer
     {
         files.add(filename);
     }
-    
+
     /**
      * Return the number of files in the collection.
      * @return The number of files in the collection.
@@ -39,7 +47,7 @@ public class MusicOrganizer
     {
         return files.size();
     }
-    
+
     /**
      * List a file from the collection.
      * @param index The index of the file to be listed.
@@ -51,17 +59,61 @@ public class MusicOrganizer
             System.out.println(filename);
         }
     }
-    
+
     /**
      * Show a list of all the files in the collection.
      */
+    public void listAllFilesWithWhile()
+    {
+        int index = 0;
+        while(index < files.size()) {
+            String filename = files.get(index);
+            System.out.println(filename);
+            index++;
+        }
+    }
+
+    public void listAllFilesWithWhileShort()
+    {
+        int index = 0;
+        while(index < files.size()) {
+            System.out.println(files.get(index++));
+        }
+    }
+
     public void listAllFiles()
     {
         for(String filename : files) {
             System.out.println(filename);
         }
     }
-    
+
+    public String findFirst(String searchString){
+        for(String filename : files) {
+            if (filename.contains(searchString))
+                return filename;
+        } 
+        return null;
+    }
+
+    public String findFirstWithWhile(String searchString){
+        boolean found = false;
+        int index = 0;
+        while(!found && index < files.size()) {
+            String filename = files.get(index);
+            if (filename.contains(searchString))
+                found = true;
+            else
+                index++;
+        } 
+        if (found) 
+            return files.get(index);
+        else
+            return null;
+        // return found ? files.get(index) : null;
+       
+    }
+
     /**
      * Remove a file from the collection.
      * @param index The index of the file to be removed.
@@ -117,7 +169,7 @@ public class MusicOrganizer
         // The return value.
         // Set according to whether the index is valid or not.
         boolean valid;
-        
+
         if(index < 0) {
             System.out.println("Index cannot be negative: " + index);
             valid = false;
