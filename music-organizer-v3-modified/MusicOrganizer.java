@@ -96,10 +96,33 @@ public class MusicOrganizer
         } 
         return null;
     }
+
+    public String deleteFirst(String searchString){
+        for(String filename : files) {
+            if (filename.contains(searchString)){
+                files.remove(filename);
+                return filename;
+            }
+        } 
+        return null;
+    }
+    /**
+     * this doesn't work - throws a concurrent modification 
+     * exception - we'll learn next week how to handle this
+     */
+    public String deleteAll(String searchString){
+        for(String filename : files) {
+            if (filename.contains(searchString))
+                files.remove(filename);
+        } 
+        return null;
+    }
+    
     public String findFirstWithWhile(String searchString){
         boolean found = false;
         int index = 0;
-        while(!found && index < files.size()) {
+        int filesSize = files.size();
+        while(!found && index < filesSize) {
             String filename = files.get(index);
             if (filename.contains(searchString))
                 found = true;
@@ -107,15 +130,16 @@ public class MusicOrganizer
                 index++;
         } 
         return found ? files.get(index) : null;
-       
+
         /*
         if (found) 
-            return files.get(index);
+        return files.get(index);
         else
-            return null;
-            */
-      
+        return null;
+         */
+
     }
+
 
     /**
      * Remove a file from the collection.
