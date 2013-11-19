@@ -3,7 +3,7 @@ About the Various MusicOrganizer Projects:
 
 * V1 Demonstrates ArrayLists.
 * V2 Can also Play Music:
-  I've deleted the individual audion subfolders in the original projects and created a common audio folder containing two example files from the public domain. You can thus use those filenames in the collection:
+  I've deleted the individual audio subfolders in the original projects and created a common audio folder containing two example files from the public domain. You can thus use those filenames in the collection:
       ../audio/mozart-nm-rondo.mp3
       ../audio/joplin-entertainer.mp3
   Sources:

@@ -45,6 +45,7 @@ target2.editor.x=0
 target2.editor.y=22
 target2.height=60
 target2.name=LoglineTokenizer
+target2.naviview.expanded=false
 target2.showInterface=false
 target2.type=ClassTarget
 target2.width=130
