@@ -29,6 +29,7 @@ public class LogAnalyzer
      */
     public void analyzeHourlyData()
     {
+
         while(reader.hasNext()) {
             LogEntry entry = reader.next();
             int hour = entry.getHour();
