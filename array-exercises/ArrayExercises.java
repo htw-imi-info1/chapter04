@@ -11,7 +11,15 @@ public class ArrayExercises
     {
     }
 
+    public void printArrayWithForEach(int[] anArray){
+        for(int number : anArray){
+            System.out.println(number);
+        }
+    }
     public void printArray(int[] anArray){
+        for(int i = 0; i < anArray.length; i++){
+            System.out.println(i+": "+anArray[i]);
+        }
     }
 
     public void printArray(){
@@ -20,11 +28,17 @@ public class ArrayExercises
     }
 
     public int[] computeFibs(){
-        int[] fib = new int[100]; 
+        int[] fib = new int[20];
         fib[0] = 0;
         fib[1] = 1;
-        //for ...
+        for (int i = 2; i < fib.length; i++){
+            fib[i] = fib[i-2]+fib[i-1];
+        }
+        return fib;
     }
 
-    public void printFibs(){}
+    public void printFibs(){
+        printArray(computeFibs());
+    
+    }
 }
