@@ -1,4 +1,6 @@
 import java.util.ArrayList;
+import java.util.Iterator;
+
 
 /**
  * A class to hold details of audio files.
@@ -110,12 +112,13 @@ public class MusicOrganizer
      * this doesn't work - throws a concurrent modification 
      * exception - we'll learn next week how to handle this
      */
-    public String deleteAll(String searchString){
-        for(String filename : files) {
+    public void deleteAll(String searchString){
+        Iterator<String> it = files.iterator();
+        while(it.hasNext()){
+            String filename = it.next();
             if (filename.contains(searchString))
-                files.remove(filename);
+                it.remove();
         } 
-        return null;
     }
     
     public String findFirstWithWhile(String searchString){

@@ -2,10 +2,10 @@
 dependency1.from=MusicOrganizer
 dependency1.to=MusicPlayer
 dependency1.type=UsesDependency
-package.editor.height=292
-package.editor.width=678
+package.editor.height=411
+package.editor.width=735
 package.editor.x=0
-package.editor.y=111
+package.editor.y=22
 package.numDependencies=1
 package.numTargets=2
 package.showExtends=true
