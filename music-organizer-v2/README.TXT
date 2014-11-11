@@ -15,3 +15,8 @@ To start:
 Create a MusicOrganizer object on the object bench.
 Use its methods to add, remove, and play files.
 
+Files to add (added by Dr. Blinken)
+      ../audio/Dragonfly-Dash-Berlin.mp3
+      ../audio/Storytelling2012.mp3
+
+
