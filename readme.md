@@ -1,5 +1,25 @@
 
+Class: Implemented Various Loops 
+========================================================
+in music-organizer-v3
+
+
+Worksheet 
+========================================================
+1. a) items.get(5-1) oder auch: items.get(4)
+   b) files.add(favoriteTrack);
+   c) 
+
+    public boolean validIndex(int i){
+        return ((i >= 0) && (i < files.size());
+    }
+
+2: see music-organizer-v3 (listAllFilesWithIndexForWorksheet - noch unvollständig)
+
+
+
 About the Various MusicOrganizer Projects:
+========================================================
 
 * V1 Demonstrates ArrayLists.
 * V2 Can also Play Music:
