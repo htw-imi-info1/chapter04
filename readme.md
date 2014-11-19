@@ -8,7 +8,6 @@ About the Various MusicOrganizer Projects:
       ../audio/Dragonfly-Dash-Berlin.mp3
       ../audio/Storytelling2012.mp3
 
-
 * V3 demonstrates iterating through the whole collection with for-each. It also has the validIndex method.
 * V4 uses a while loop to search for tracks
 * V5 improves structure by introducing a track class
