@@ -118,6 +118,65 @@ public class MusicOrganizer
     }
 
     /**
+     * return true if song with x is in collection
+     * v4: with only one return statement and
+     * stopping to iterate when first occurence is found
+     * - version answering question 3a of worksheet
+     */
+    public boolean containsV5Worksheet(String searchString)
+    {
+        boolean found = false;
+        int index = 0;
+        // does not change, so we can store it in a local
+        // variable
+        int size = files.size();
+        while((index < size) && (!found)){
+            //for(String filename : files) {
+            String filename = files.get(index);
+            if (filename.contains(searchString)){
+                found = true;
+            }
+            index = index + 1;
+        }
+        return found;
+    }
+
+    /**
+     * findFirst returns index of first element that contains the
+     * search String, 
+     */
+    public int findFirst(String searchString)
+    {
+        boolean found = false;
+        int index = 0;
+        while((index < files.size()) && (!found)){
+            //for(String filename : files) {
+            String filename = files.get(index);
+            if (filename.contains(searchString)){
+                found = true;
+            }
+            index = index + 1;
+        }
+        if (found)
+            return index-1;
+        else
+            return -1;
+    }
+
+    public int findFirstJump(String searchString)
+    {
+        int index = 0;
+        while((index < files.size()) ){
+            String filename = files.get(index);
+            if (filename.contains(searchString)){
+                return index;
+            }
+            index = index + 1;
+        }
+        return -1; // not found if we got here
+    }
+
+    /**
      * return count of song if song with x is in collection
      */
     public int count(String searchString)
@@ -141,6 +200,7 @@ public class MusicOrganizer
             System.out.println(filename);
         }
     }
+
     /**
      * Show a list of all the files in the collection.
      */
@@ -148,9 +208,11 @@ public class MusicOrganizer
     {
         int index = 0;
         for(String filename : files) {
+            index++;
             System.out.println("No "+index+": "+filename);
         }
     }
+
     /**
      * Remove a file from the collection.
      * @param index The index of the file to be removed.

@@ -4,7 +4,7 @@ Class: Implemented Various Loops
 in music-organizer-v3
 
 
-Worksheet 
+Solutions for Worksheet Chapter 4 done in Class
 ========================================================
 1. a) items.get(5-1) oder auch: items.get(4)
    b) files.add(favoriteTrack);
