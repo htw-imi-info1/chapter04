@@ -49,7 +49,7 @@ public class Lot
             return false;
         }
     }
-    
+
     /**
      * @return A string representation of this lot's details.
      */
@@ -58,7 +58,8 @@ public class Lot
         String details = number + ": " + description;
         if(highestBid != null) {
             details += "    Bid: " + 
-                       highestBid.getValue();
+            highestBid.getValue() + " von "
+            + highestBid.getBidder().getName();
         }
         else {
             details += "    (No bid)";

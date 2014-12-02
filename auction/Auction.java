@@ -9,6 +9,17 @@ import java.util.ArrayList;
  */
 public class Auction
 {
+    public static Auction test(){
+        Auction auction = new Auction();
+        auction.enterLot("Hollywoodschaukel");
+        auction.enterLot("Kinderschaukel");
+        auction.enterLot("Porsche 911");
+        Person dilan = new Person ("Dilan");
+        Person manni = new Person ("Manni");
+        auction.makeABid(3, dilan, 2786363);
+        auction.makeABid(1, manni, 150);
+        return auction;
+    }
     // The list of Lots in this auction.
     private ArrayList<Lot> lots;
     // The number that will be given to the next lot entered
@@ -39,8 +50,8 @@ public class Auction
      */
     public void showLots()
     {
-        for(Lot lot : lots) {
-            System.out.println(lot.toString());
+        for(Lot currentLot : lots) {
+            System.out.println(currentLot.toString());
         }
     }
     
