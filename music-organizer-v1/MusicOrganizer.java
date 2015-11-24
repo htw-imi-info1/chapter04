@@ -49,8 +49,39 @@ public class MusicOrganizer
         }
     }
 
+    public String searchFileWithWhile(String searchString){
+        int index = 0;
+        boolean found = false;
+        String file  = null;
+        while(index < files.size() && !found) {
+             file = files.get(index);
+            if(file.contains(searchString)) {
+                // We don't need to keep looking.
+                found = true;
+            }
+            else {
+                index++;
+            }
+        }
+        if (found){
+            return file;
+        }
+        else{
+            return null;
+        }
+        
+    }
+    public String searchFile(String searchString){ 
+        for(String file : files){
+            if(file.contains(searchString)) {
+                return file;
+            }        
+        }
+        return null;
+    }
+
     public void listAllFiles(){
-        for(int i = 0;i < files.size();i++){
+        for(int i = 0;i < files.size();){
             String filename = files.get(i);
             System.out.println(filename);
 

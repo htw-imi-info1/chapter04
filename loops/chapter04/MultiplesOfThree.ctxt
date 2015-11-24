@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.params=
+comment0.target=void\ loopFor()
+comment1.params=max
+comment1.target=void\ loopFor(int)
+comment2.params=
+comment2.target=void\ loopWhile()
+numComments=3
