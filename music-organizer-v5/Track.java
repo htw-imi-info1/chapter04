@@ -84,5 +84,14 @@ public class Track
         this.title = title;
         this.filename = filename;
     }
-    
+    public boolean equals(Track other){
+        if (!artist.equals(other.getArtist()))
+        return false;
+        if (!title.equals(other.getTitle()))
+        return false;
+        if (!filename.equals(other.getFilename()))
+        return false;
+        
+        return true;
+    }
 }
