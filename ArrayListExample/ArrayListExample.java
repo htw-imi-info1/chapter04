@@ -1,6 +1,30 @@
 import java.util.ArrayList;
 public class ArrayListExample
 {
+    public void whilePlayground(){
+        ArrayList<String> files = new ArrayList<String>();
+        files.add("a.mp3");
+        files.add("b.mp3");
+        files.add("c.mp3");
+
+        int i = 0 ;
+        while(i<files.size()){
+            System.out.println(files.get(i));
+            i++;
+        }
+
+    }
+    public void forEachPlayground(){  
+        ArrayList<String> files = new ArrayList<String>();
+        files.add("a.mp3");
+        files.add("b.mp3");
+        files.add("c.mp3");
+        for(String fileName : files){
+            System.out.println(fileName);
+        }
+
+    }
+
     public void arrayListPlayground(){
         // files initialisieren
         ArrayList<String> files = new ArrayList<String>();
@@ -14,7 +38,6 @@ public class ArrayListExample
         files.remove(1);
         // what is the index of d?
         System.out.println("Index of d: "+files.indexOf("d.mp3"));
-        
-
     }
+
 }
