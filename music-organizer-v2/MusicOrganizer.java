@@ -1,4 +1,4 @@
-import java.util.ArrayList;
+import java.util.*;
 
 /**
  * A class to hold details of audio files.
@@ -13,7 +13,7 @@ public class MusicOrganizer
     private ArrayList<String> files;
     // A player for the music files.
     private MusicPlayer player;
-        
+
     /**
      * Create a MusicOrganizer
      */
@@ -22,7 +22,7 @@ public class MusicOrganizer
         files = new ArrayList<String>();
         player = new MusicPlayer();
     }
-    
+
     /**
      * Add a file to the collection.
      * @param filename The file to be added.
@@ -31,7 +31,7 @@ public class MusicOrganizer
     {
         files.add(filename);
     }
-    
+
     /**
      * Return the number of files in the collection.
      * @return The number of files in the collection.
@@ -40,7 +40,7 @@ public class MusicOrganizer
     {
         return files.size();
     }
-    
+
     /**
      * List a file from the collection.
      * @param index The index of the file to be listed.
@@ -52,7 +52,7 @@ public class MusicOrganizer
             System.out.println(filename);
         }
     }
-    
+
     /**
      * Remove a file from the collection.
      * @param index The index of the file to be removed.
@@ -82,9 +82,80 @@ public class MusicOrganizer
     {
         player.stop();
     }
+
     public void listAllTracks(){
         for(String fileName: files){
             System.out.println(fileName);
         }
     }
+
+    public int indexOfTrackV1(String searchString){
+        int counter = 0;
+        for(String fileName: files){
+            if (fileName.equals(searchString)){
+                return counter;
+            }
+            counter ++;
+        }
+        return -1;
+    }
+
+    public int indexOfTrackV2(String searchString){
+        int counter = 0;
+        while(counter < files.size()){
+            if (searchString.equals(files.get(counter))){
+                return counter;
+            }
+            counter++;
+        }
+        return -1;
+    }
+
+    public int indexOfTrackV3(String searchString){
+        for(int counter = 0;counter < files.size(); counter++){
+            if (searchString.equals(files.get(counter))){
+                return counter;
+            }
+        }
+        return -1;
+    }
+
+    public void removeTrackFirst(String searchString){
+        int counter = 0;
+        boolean found = false;
+        while((counter < files.size()) && !found){
+            if (searchString.equals(files.get(counter))){
+                files.remove(counter);
+                found = true;
+            }
+            counter++;
+        }
+        // could do more things here!      
+
+    }
+
+    public void removeTrackAll(String searchString){
+        int counter = 0;
+        while(counter < files.size()){
+            if (searchString.equals(files.get(counter))){
+                files.remove(counter);        
+            } else {
+                counter++;
+            }
+        }
+        // could do more things here!      
+
+    }
+
+    public void removeTrackWithIterator(String searchString){
+
+        Iterator<String> iterator = files.iterator();
+        while(iterator.hasNext()){
+            if (searchString.equals(iterator.next())){
+                iterator.remove();        
+            }
+        }
+
+    }
+
 }
