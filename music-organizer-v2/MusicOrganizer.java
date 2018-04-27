@@ -5,7 +5,7 @@ import java.util.ArrayList;
  * This version can play the files.
  * 
  * @author David J. Barnes and Michael Kölling
- * @version 2011.07.31
+ * @version 2016.02.29
  */
 public class MusicOrganizer
 {
@@ -19,7 +19,7 @@ public class MusicOrganizer
      */
     public MusicOrganizer()
     {
-        files = new ArrayList<String>();
+        files = new ArrayList<>();
         player = new MusicPlayer();
     }
     

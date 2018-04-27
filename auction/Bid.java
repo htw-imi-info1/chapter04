@@ -3,7 +3,7 @@
  * It contains a reference to the Person bidding and the amount bid.
  * 
  * @author David J. Barnes and Michael Kölling.
- * @version 2011.07.31
+ * @version 2016.02.29
  */
 public class Bid
 {

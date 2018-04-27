@@ -5,7 +5,7 @@ import java.util.ArrayList;
  * The auction maintains a list of lots of arbitrary length.
  *
  * @author David J. Barnes and Michael Kölling.
- * @version 2011.07.31
+ * @version 2016.02.29
  */
 public class Auction
 {
@@ -20,7 +20,7 @@ public class Auction
      */
     public Auction()
     {
-        lots = new ArrayList<Lot>();
+        lots = new ArrayList<>();
         nextLotNumber = 1;
     }
 
