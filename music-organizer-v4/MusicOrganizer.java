@@ -78,6 +78,16 @@ public class MusicOrganizer
         }
     }
 
+    public static MusicOrganizer instanceWithData(){
+        MusicOrganizer morg = new MusicOrganizer();
+        morg.addFile("BigBillBroonzy-BabyPleaseDontGo1.mp3");
+        morg.addFile("BlindBlake-EarlyMorningBlues.mp3");
+        morg.addFile("BlindLemonJefferson-OneDimeBlues.mp3");
+        morg.addFile("BlindLemonJefferson-matchBoxBlues.mp3");
+        morg.addFile("Dragonfly-Dash-Berlin.mp3");
+        morg.addFile("Storytelling2012.mp3");
+        return morg;
+    }
     /**
      * Find the index of the first file matching the given
      * search string.
