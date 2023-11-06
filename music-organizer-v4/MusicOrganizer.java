@@ -112,6 +112,27 @@ public class MusicOrganizer
         }
     }
 
+    public String findFirstRefactored(String searchString)
+    {
+        for(String filename : files){
+            if(filename.contains(searchString))
+                return filename;
+        }
+        return null;
+
+    }
+    
+    public int findFirstRefactoredIndex(String searchString)
+    {
+        for(int i=0;i<files.size();i++){
+            String filename = files.get(i);
+            if(filename.contains(searchString))
+                return i;
+        }
+        return -1;
+    }
+
+
     /**
      * Remove a file from the collection.
      * @param index The index of the file to be removed.
