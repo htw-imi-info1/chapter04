@@ -134,6 +134,7 @@ public class MusicPlayer
             if(player != null) {
                 player.stop();
                 player = null;
+            
             }
         }
     }

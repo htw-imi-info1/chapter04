@@ -12,7 +12,7 @@ public class MusicOrganizer
     private ArrayList<String> files;
     // A player for the music files.
     private MusicPlayer player;
-        
+
     /**
      * Create a MusicOrganizer
      */
@@ -21,7 +21,7 @@ public class MusicOrganizer
         files = new ArrayList<>();
         player = new MusicPlayer();
     }
-    
+
     /**
      * Add a file to the collection.
      * @param filename The file to be added.
@@ -30,7 +30,7 @@ public class MusicOrganizer
     {
         files.add(filename);
     }
-    
+
     /**
      * Return the number of files in the collection.
      * @return The number of files in the collection.
@@ -39,7 +39,7 @@ public class MusicOrganizer
     {
         return files.size();
     }
-    
+
     /**
      * List a file from the collection.
      * @param index The index of the file to be listed.
@@ -51,7 +51,7 @@ public class MusicOrganizer
             System.out.println(filename);
         }
     }
-    
+
     /**
      * Show a list of all the files in the collection.
      */
@@ -61,7 +61,34 @@ public class MusicOrganizer
             System.out.println(filename);
         }
     }
-    
+
+    public void listAllFilesWithWile()
+    {
+        int i = 0;
+        while(i<files.size()) {
+            String filename = files.get(i);
+            System.out.println(filename);
+            i++;
+        }
+    }
+
+    public void listAllFilesWithFor()
+    {
+
+        for(int i = 0;i<files.size(); i++) {
+            String filename = files.get(i);
+            System.out.println(filename);
+
+        }
+    }
+
+    public void addThree(){
+        addFile("a.mp3");
+        addFile("b.mp3");
+        addFile("c.mp3");
+
+    }
+
     /**
      * Remove a file from the collection.
      * @param index The index of the file to be removed.
@@ -117,7 +144,7 @@ public class MusicOrganizer
         // The return value.
         // Set according to whether the index is valid or not.
         boolean valid;
-        
+
         if(index < 0) {
             System.out.println("Index cannot be negative: " + index);
             valid = false;
